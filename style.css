@@ -1,0 +1,165 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    overflow-x: hidden;
+    background: url(https://www.leseclaireuses.com/ec_content/20161205-thinkstockphotos-473823084_1.jpg);
+    background-size: cover;
+    opacity: 90%;
+    height: 100vh;
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+#header .logo {
+    width: 360px;
+    margin-left: 450px;
+    color: #fff;
+    background: #f156;
+    background-size: 370px;
+}
+
+#header h1 {
+    text-align: center;
+    color: #000;
+    font-size: 150px;
+    padding-top: 50px;
+} 
+#header h1 + p {
+    text-align: center;
+    color: #000;
+    font-size: 45px;
+    position: relative;
+    margin-top: 40px;
+    top: -35px;
+}
+
+#header .container-corner {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+#header .btn-circle {
+    background: rgb(78,76,221);
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 15;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #fff;
+}
+
+#header .line {
+    width: 50%;
+    height: 3px;
+    background: #fff;
+    transition: 
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    top 0.2s ease 0.2s;
+    position: relative;
+}
+#header .line:nth-child(1){
+    top: -10px;
+}
+#header .line:nth-child(3){
+    top: 10px;
+}
+
+#header .btn-circle.menu-anim .line:nth-child(1){
+    top: 3px;
+    transform: rotate(45deg);
+    transition: 
+    top 0.2s ease,
+    transform 0.2s ease 0.2s;
+}
+
+#header .btn-circle.menu-anim .line:nth-child(2){
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#header .btn-circle.menu-anim .line:nth-child(3){
+    top: -3px;
+    transform: rotate(-45deg);
+    transition: 
+    top 0.2s ease,
+    transform 0.2s ease 0.2s;
+}
+
+#header .circle-menu {
+    background: #db5656;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 90px solid rgba(255,255,255,0.239);
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease 0.5s;
+}
+
+#header .circle-menu.circle-anim {
+    transition: transform 0.4s ease 0.4s;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#header .links-circle {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header .links-circle img {
+    width: 90px;
+    transition: transform 0.2s ease;
+}
+
+#header .links-circle img:hover {
+    transform: scale(1.2);
+}
+
+#header .links-circle:nth-child(1){
+    left: 0%;
+    transition: transform 0.2s ease 0.4s;
+}
+#header .links-circle:nth-child(2){
+    left: 15%;
+    top: 85%;
+    transition: transform 0.2s ease 0.2s;
+}
+#header .links-circle:nth-child(3){
+    top: 100%;
+    transition: transform 0.2s ease;
+}
+
+#header .circle-menu.circle-anim .links-circle:nth-child(1){
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.2s ease 0.7s;
+}
+#header .circle-menu.circle-anim .links-circle:nth-child(2){
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.2s ease 0.9s;
+}
+#header .circle-menu.circle-anim .links-circle:nth-child(3){
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.2s ease 1.1s;
+}
